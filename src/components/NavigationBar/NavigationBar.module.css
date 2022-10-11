@@ -1,0 +1,17 @@
+.navBar {
+    background-color: #191C36;
+}
+.logo {
+    font-size: 24px !important;
+    color: #ffff !important;
+    font-weight: 700 !important;
+}
+.navLink {
+    font-size: 20px !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+    transition: all 0.4s;
+}
+.navLink:hover {
+    color: #C11DC1 !important;
+}

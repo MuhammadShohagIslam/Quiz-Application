@@ -1,0 +1,21 @@
+.jumbotronHeader {
+    background-image: url("../../images/quiz.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 270px;
+}
+.headerWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+.headerTitle {
+    font-size: 36px;
+    color: #fff;
+    font-weight: 600;
+    width: 790px;
+    text-align: center;
+}

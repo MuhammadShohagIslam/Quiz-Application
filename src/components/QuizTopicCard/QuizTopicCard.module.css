@@ -1,0 +1,17 @@
+.topicCard {
+    border: 5px solid #fff !important;
+}
+.topicCardImage {
+    max-height: 290px;
+    width: 100%;
+    background-color: #191c36;
+}
+.topicCardInfo {
+    display: flex;
+    justify-content: space-between;
+}
+.topicCardButtonWrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
