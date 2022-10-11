@@ -4,6 +4,9 @@ body {
     box-sizing: border-box;
     background-color: #191c36 !important;
 }
+a{
+    text-decoration: none !important;
+}
 .navbar-nav .nav-link.active,
 .navbar-nav .show > .nav-link {
     color: #c11dc1 !important;

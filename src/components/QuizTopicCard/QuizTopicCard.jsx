@@ -1,11 +1,12 @@
 import React from "react";
 import { Col, Card, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import classes from "./QuizTopicCard.module.css";
 
 const QuizTopicCard = ({ quizTopic }) => {
-    const { logo, name, total } = quizTopic;
+    const { id, logo, name, total } = quizTopic;
     return (
         <Col md={3} className="mb-4">
             <Card className={classes.topicCard}>
@@ -20,14 +21,15 @@ const QuizTopicCard = ({ quizTopic }) => {
                         <Card.Title>{name}</Card.Title>
                         <Card.Title>Total Quiz's: {total}</Card.Title>
                     </div>
-                    <div className={`${classes.topicCardButtonWrapper} pt-2`}>
-                        <Button
-                            className={classes.topicCardButton}
-                            variant="dark"
-                        >
-                            Start Practice <FontAwesomeIcon icon={faArrowRight} />
+                    <Link
+                        className={`${classes.topicCardButtonWrapper} pt-2`}
+                        to={`/topic-quiz/${id}`}
+                    >
+                        <Button className={classes.topicCardButton}>
+                            Start Practice{" "}
+                            <FontAwesomeIcon icon={faArrowRight} />
                         </Button>
-                    </div>
+                    </Link>
                 </Card.Body>
             </Card>
         </Col>

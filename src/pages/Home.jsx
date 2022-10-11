@@ -16,10 +16,8 @@ const Home = () => {
         );
         const { data } = await response.json();
         setTopicQuizs(data);
-        console.log(data,"god")
     };
 
-    console.log(topicQuizs, "good");
     return (
         <>
             <Layout>

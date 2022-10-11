@@ -15,3 +15,15 @@
     display: flex;
     justify-content: center;
 }
+.topicCardButton{
+    background-color: #191c36 !important;
+    border: none !important;
+    font-size: 19px !important;
+    border: 1px solid #191c36 !important;
+    transition: all .4s !important;
+    font-weight: 500 !important;
+}
+.topicCardButton:hover{
+   background-color: transparent !important;
+   color: #191c36 !important;
+}
