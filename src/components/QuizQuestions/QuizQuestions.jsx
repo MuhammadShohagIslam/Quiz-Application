@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Card, Form } from "react-bootstrap";
 import { useParams } from "react-router-dom";
-import { toast } from 'react-toastify';
-
+import { toast } from "react-toastify";
+import classes from "./QuizQuestions.module.css";
 
 const QuizQuestions = () => {
     const [questions, setQuestions] = useState([]);
@@ -22,25 +22,26 @@ const QuizQuestions = () => {
     console.log(questions.questions, "god");
 
     const handleChange = (value, correctAnswer) => {
-        if(value === correctAnswer){
-            toast.success("This Is Correct Answer")
-        }else{
-            toast.error("This Is Wrong Answer")
+        if (value === correctAnswer) {
+            toast.success("This Is Correct Answer");
+        } else {
+            toast.error("This Is Wrong Answer");
         }
-       
     };
     return (
         <section>
-            <div className="quizQuestionTitle">
-                <h2>Quiz About {questions.name}</h2>
+            <div>
+                <h2 className={classes.quizQuestionTitle}>
+                    Quiz About {questions.name}
+                </h2>
             </div>
             <div className="questionWrapper">
                 <Container>
-                    <Row>
+                    <Row className="d-flex justify-content-center">
                         {questions.questions &&
                             questions.questions.map((q, index) => {
                                 return (
-                                    <Col md={8}>
+                                    <Col md={8} className="mb-4">
                                         <Card>
                                             <Card.Header>
                                                 Quiz {index + 1}:{" "}
@@ -59,11 +60,13 @@ const QuizQuestions = () => {
                                                                 className="mb-3"
                                                             >
                                                                 <Form.Check
-                                                                   
                                                                     label={
                                                                         option
                                                                     }
-                                                                    name={`quiz-group-${index+1}`}
+                                                                    name={`quiz-group-${
+                                                                        index +
+                                                                        1
+                                                                    }`}
                                                                     type="radio"
                                                                     id={option}
                                                                     value={
@@ -72,7 +75,12 @@ const QuizQuestions = () => {
                                                                     onChange={(
                                                                         e
                                                                     ) =>
-                                                                        handleChange(e.target.value, q.correctAnswer)
+                                                                        handleChange(
+                                                                            e
+                                                                                .target
+                                                                                .value,
+                                                                            q.correctAnswer
+                                                                        )
                                                                     }
                                                                 />
                                                             </div>

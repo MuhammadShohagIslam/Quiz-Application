@@ -1,13 +1,33 @@
+html,
+body {
+    height: 100% !important;
+}
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: #191c36 !important;
 }
-a{
+div#root {
+    height: 100% !important;
+}
+a {
     text-decoration: none !important;
+}
+
+main {
+    min-height: 100% !important;
+    position: relative !important;
 }
 .navbar-nav .nav-link.active,
 .navbar-nav .show > .nav-link {
     color: #c11dc1 !important;
+}
+.form-check-input:checked {
+    background-color: #191c36 !important;
+    border-color: #191c36 !important;
+}
+footer {
+    position: absolute;
+    width: 100%;
 }
