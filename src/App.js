@@ -1,20 +1,20 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
-import Blogs from "./pages/Blogs";
-import Home from "./pages/Home";
-import Quiz from "./pages/Quiz";
-import Statistics from "./pages/Statistics";
+import BlogsPage from "./pages/BlogsPage";
+import HomePage from "./pages/HomePage";
+import QuizPage from "./pages/QuizPage";
+import StatisticsPage from "./pages/StatisticsPage";
 
 function App() {
     return (
         <>
             <ToastContainer />
             <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/topic-quiz/:quizId" element={<Quiz />} />
-                <Route path="/statistics" element={<Statistics />} />
-                <Route path="/blog" element={<Blogs />} />
+                <Route path="/" element={<HomePage />} />
+                <Route path="/topic-quiz/:quizId" element={<QuizPage />} />
+                <Route path="/statistics" element={<StatisticsPage />} />
+                <Route path="/blog" element={<BlogsPage />} />
             </Routes>
         </>
     );

@@ -1,0 +1,17 @@
+[
+    {
+        "id": "1",
+        "title": "What is the purpose of the react router?",
+        "description": "React Router is a standard library for routing in React. It allows navigating between views of multiple components in a React Application, changes to browser URL, and keeps the UI in sync with the URL."
+    },
+    {
+        "id": "2",
+        "title": "How does context api work?",
+        "description": "The React Context API allows a React project to generate global variables that can be passed around. This is an alternative to 'prop drilling,' which involves passing props from grandma to kid to parent, and so on. Context is also promoted as a simpler, lighter way to Redux state management."
+    },
+    {
+        "id": "3",
+        "title": "What is the useRef hook in the ReactJS?",
+        "description": "The useRef Hook lets you save values between renderings. It may be used to hold a changeable value that does not require a re-render every time it is altered. It may be used to directly access a DOM element."
+    }
+]

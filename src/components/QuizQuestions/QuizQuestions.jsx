@@ -1,25 +1,28 @@
 import React, { useState, useEffect } from "react";
-import { Container, Row, Col, Card, Form } from "react-bootstrap";
+import { Container, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
+import Answers from "../Answers/Answers";
 import classes from "./QuizQuestions.module.css";
 
 const QuizQuestions = () => {
     const [questions, setQuestions] = useState([]);
+    const [loading, setLoading] = useState(true);
     const { quizId } = useParams();
 
     useEffect(() => {
-        loadQuizQuestions();
-    }, []);
+        loadQuizQuestions(quizId);
+    }, [quizId]);
 
-    const loadQuizQuestions = async () => {
+    const loadQuizQuestions = async (quizId) => {
+        setLoading(true);
         const response = await fetch(
             `https://openapi.programming-hero.com/api/quiz/${quizId}`
         );
         const { data } = await response.json();
         setQuestions(data);
+        setLoading(false);
     };
-    console.log(questions.questions, "god");
 
     const handleChange = (value, correctAnswer) => {
         if (value === correctAnswer) {
@@ -30,71 +33,32 @@ const QuizQuestions = () => {
     };
     return (
         <section>
-            <div>
-                <h2 className={classes.quizQuestionTitle}>
-                    Quiz About {questions.name}
-                </h2>
-            </div>
-            <div className="questionWrapper">
-                <Container>
-                    <Row className="d-flex justify-content-center">
-                        {questions.questions &&
-                            questions.questions.map((q, index) => {
-                                return (
-                                    <Col md={8} className="mb-4">
-                                        <Card>
-                                            <Card.Header>
-                                                Quiz {index + 1}:{" "}
-                                                {q.question
-                                                    .split("<p>")
-                                                    .join("")
-                                                    .split("</p>")
-                                                    .join("")}
-                                            </Card.Header>
-                                            <Card.Body>
-                                                {q.options.map(
-                                                    (option, idx) => (
-                                                        <>
-                                                            <div
-                                                                key={`${idx}`}
-                                                                className="mb-3"
-                                                            >
-                                                                <Form.Check
-                                                                    label={
-                                                                        option
-                                                                    }
-                                                                    name={`quiz-group-${
-                                                                        index +
-                                                                        1
-                                                                    }`}
-                                                                    type="radio"
-                                                                    id={option}
-                                                                    value={
-                                                                        option
-                                                                    }
-                                                                    onChange={(
-                                                                        e
-                                                                    ) =>
-                                                                        handleChange(
-                                                                            e
-                                                                                .target
-                                                                                .value,
-                                                                            q.correctAnswer
-                                                                        )
-                                                                    }
-                                                                />
-                                                            </div>
-                                                        </>
-                                                    )
-                                                )}
-                                            </Card.Body>
-                                        </Card>
-                                    </Col>
-                                );
-                            })}
-                    </Row>
-                </Container>
-            </div>
+            {loading ? (
+                <div
+                    className="d-flex justify-content-center align-items-center"
+                    style={{ height: "500px" }}
+                >
+                    <h2 className="text-center text-white">Loading...</h2>
+                </div>
+            ) : (
+                <>
+                    <div>
+                        <h2 className={classes.quizQuestionTitle}>
+                            Quiz About {questions.name}
+                        </h2>
+                    </div>
+                    <div className="questionWrapper">
+                        <Container>
+                            <Row className="d-flex justify-content-center">
+                                <Answers
+                                    questions={questions}
+                                    handleChange={handleChange}
+                                />
+                            </Row>
+                        </Container>
+                    </div>
+                </>
+            )}
         </section>
     );
 };

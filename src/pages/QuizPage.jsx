@@ -2,7 +2,7 @@ import React from "react";
 import Layout from "../components/Layout/Layout";
 import QuizQuestions from "../components/QuizQuestions/QuizQuestions";
 
-const Quiz = () => {
+const QuizPage = () => {
     return (
         <Layout>
             <QuizQuestions />
@@ -10,4 +10,4 @@ const Quiz = () => {
     );
 };
 
-export default Quiz;
+export default QuizPage;

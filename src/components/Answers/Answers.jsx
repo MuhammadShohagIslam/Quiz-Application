@@ -1,31 +1,36 @@
-import React, { Fragment } from "react";
-import Checkbox from "../Checkbox/Cheackbox";
+import React from "react";
+import { Col, Card } from "react-bootstrap";
+import RadioButton from "../RadioButton/RadioButton";
 
-export default function Answers({ options = [], handleChange, input }) {
-  return (
-    <div >
-      {options.map((option, index) => (
-        <Fragment key={index}>
-          {input ? (
-            <Checkbox
-              key={index}
-             
-              text={option.title}
-              value={index}
-              checked={option.checked}
-              onChange={(e) => handleChange(e, index)}
-            />
-          ) : (
-            <Checkbox
-              key={index}
-              
-              text={option.title}
-              defaultChecked={option.checked}
-              disabled
-            />
-          )}
-        </Fragment>
-      ))}
-    </div>
-  );
-}
+const Answers = ({ questions, handleChange }) => {
+    return (
+        <>
+            {questions.questions &&
+                questions.questions.map((q, index) => {
+                    return (
+                        <Col md={8} className="mb-4" key={q.id}>
+                            <Card>
+                                <Card.Header className="h5 p-3">
+                                    Quiz {index + 1}:{" "}
+                                    {q.question
+                                        .split("<p>")
+                                        .join("")
+                                        .split("</p>")
+                                        .join("")}
+                                </Card.Header>
+                                <Card.Body>
+                                    <RadioButton
+                                        index={index}
+                                        question={q}
+                                        handleChange={handleChange}
+                                    />
+                                </Card.Body>
+                            </Card>
+                        </Col>
+                    );
+                })}
+        </>
+    );
+};
+
+export default Answers;
