@@ -13,7 +13,7 @@ const RadioButton = ({ index, question, handleChange }) => {
                         id={option}
                         value={option}
                         onChange={(e) =>
-                            handleChange(e.target.value, question.correctAnswer)
+                            handleChange(e.target.value, question)
                         }
                     />
                 </div>

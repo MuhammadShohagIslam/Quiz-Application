@@ -1,8 +1,28 @@
-.quizQuestionTitle{
+.quizQuestionTitle {
     font-size: 30px;
     color: #fff;
     font-weight: 600;
     margin-bottom: 40px;
     text-align: center;
-    margin-top: 50px
+    margin-top: 50px;
+}
+.showResultButtonWrapper {
+    width: 66%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 35px;
+}
+.showResultButton {
+    background-color: #fff !important;
+    border: none !important;
+    color: #000 !important;
+    font-size: 19px !important;
+    border: 2px solid #fff !important;
+    transition: all 0.4s !important;
+    font-weight: 500 !important;
+    padding: 12px 52px !important;
+}
+.showResultButton:hover {
+    background-color: transparent !important;
+    color: #fff !important;
 }

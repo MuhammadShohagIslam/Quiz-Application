@@ -2,3 +2,9 @@
     display: flex;
     justify-content: center;
 }
+.statisticHeaderSection{
+    margin: 21px 0px 23px;
+}
+.statisticHeaderSectionTitle{
+    font-size: 20px;
+}
