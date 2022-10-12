@@ -19,3 +19,15 @@
     width: 790px;
     text-align: center;
 }
+/* Start Small Devices */
+@media only screen and (max-width: 767px) {
+    .jumbotronHeader {
+        height: 200px;
+    }
+    .headerTitle {
+        font-size: 24px;
+        width: 270px;
+    }
+} /* End Small Devices */
+
+

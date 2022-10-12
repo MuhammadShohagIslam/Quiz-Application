@@ -8,7 +8,7 @@ import classes from "./QuizTopicCard.module.css";
 const QuizTopicCard = ({ quizTopic }) => {
     const { id, logo, name, total } = quizTopic;
     return (
-        <Col md={3} className="mb-4">
+        <Col xl={3} lg={4} md={6} sm={12} className="mb-4">
             <Card className={classes.topicCard}>
                 <Card.Img
                     className={classes.topicCardImage}
