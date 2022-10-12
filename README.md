@@ -1,71 +1,59 @@
-# Getting Started with Create React App
+<h2 align="center">I am Muhammad Jhohirul Islam Shohag</h2>
+<p align="center">I am Backend Focus Full-Stack Developer</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Let's Talk About My MernQuiz Application
 
-## Available Scripts
+### MernQuiz Application Live: []()
 
-In the project directory, you can run:
+### Description About My Project
 
-### `npm start`
+-   ### Home Page
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<div align="center">
+    <img width="450" src="../quiz/preview/home.JPG">
+</div> 
+<p>On the home page, we can get the total quiz topic and a header(jumbotron)</p>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+-   ### Topic Page
 
-### `npm test`
+<div align="center">
+    <img width="450" src="../quiz/preview/topic.JPG">
+</div> 
+<p>On the Topic page, we can get the total quiz topic </p>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+-   ### Quiz Answer Page
 
-### `npm run build`
+<div align="center">
+    <img width="450" src="../quiz/preview/question.JPG">
+</div> 
+<p>On the Quiz Answer page, we have some question through which we can increase our knowledge</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-   ### Quiz Answer Result Modal
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<div align="center">
+    <img width="450" src="../quiz/preview/showQuizResult.JPG">
+</div> 
+<p>On Quiz Answer Result Modal, It shows a modal through which we can see our result of each topic</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-   ### Statistics Page
 
-### `npm run eject`
+<div align="center">
+    <img width="450" src="../quiz/preview/statistics.JPG">
+</div> 
+<p>On the Statistics page, we can see a AreaChart which represents a area char, through which we can get information how much quiz per topic</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+-   ### Blog Page
+<div align="center">
+    <img width="450" src="../quiz/preview/blog.JPG">
+</div> 
+<p>On the Blog page, we have blog section where we can read blog related technology</p>
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# b6-quiz-crackerz-MuhammadShohagIslam" 
+# Let's See Which Technology use of our project
+- HTML
+- CSS
+- REACT
+- React-Router-Dom
+- React-FontAwesome
+- ReChart
+- React-Bootstrap-Router
